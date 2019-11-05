@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <!-- based on the structure of your messages, determine how to display them -->
+        <% if(messages.registration) { %>
+            <% for (var error of messages.registration) { %>
+            <h3><%= error %></h3>
+            <% } %>
+        <% } %>
+        <h1>add user and quote</h1>
+        <form action="/quotes" method="post">
+            <label for="username">Enter name: </label>
+            <input id="username" type="text" name="name">
+            <label for="quote">Enter quote: </label>
+            <textarea id="quote" type="text" name="quote"></textarea>
+            <input type="submit" value="OK">
+        </form>
+    </body>
+</html>
+
+
+<!--// {"errors":
+//     {
+//         "quote":
+//             {
+//                 "message":"Path `quote` (`peace`) is shorter than the minimum allowed length (6).",
+//                 "name":"ValidatorError",
+//                 "properties":
+//                     {
+//                         "message":"Path `quote` (`peace`) is shorter than the minimum allowed length (6).",
+//                         "type":"minlength",
+//                         "minlength":6,
+//                         "path":"quote",
+//                         "value":"peace"
+//                     },
+//                 "kind":"minlength",
+//                 "path":"quote",
+//                 "value":"peace"
+//             }
+//     },
+//     "_message":"Quote validation failed",
+//     "message":"Quote validation failed: quote: Path `quote` (`peace`) is shorter than the minimum allowed length (6).",
+//     "name":"ValidationError"
+// }-->

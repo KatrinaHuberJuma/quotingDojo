@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>DUDE</h1>
+        <script>console.log("hello")</script>
+        <% for (var user of users) { %>
+        <h1>Name: <%= user.name %></h1>
+        
+        <h2>quotes:</h2>
+        <ul>
+            <% for (var quote of user.quotes) { %>
+                <li><h4>"<%= quote.quote %>"</h4><ul><li><%= quote.date %></li></ul></li>
+            <% } %>
+        </ul>
+        
+        <% } %>
+
+    </body>
+</html>
